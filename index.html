@@ -1,44 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
     <header>
-        <div><a href="#">Gmail</a></div>
-        <div><a href="#">Images</a></div>
+        <p class="align-right-text"><a href="#">Gmail</a> <a href="#">Images</a></p>
     </header>
 <body>
-    <div class="container">
-        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
-        <div id="container-input"><input></div>
-        <div id="container-btn">
-        <button class="btn">Google Search
-        <button class="btn">I'm Feeling Lucky
+    <div id="container-main">
+        <img class="center" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
+        <input id="input-search" class="center">
+        <div id="container-btn" class="center">
+        <button id="btn-search">Google Search
+        <button id="btn-lucky">I'm Feeling Lucky
         </div>
-        <div>Google offered in: <a href="#">Filipino</a>  <a href="#">Cebuano</a></div>
+        <p class="center-text">Google offered in: <a href="#">Filipino</a>  <a href="#">Cebuano</a></p>
     </div>
 </body>
+<footer>
+<p>Philippines</p>
+<p class="align-right-text">Advertising Business About How Search Works</p>
+<p class="align-right-text">Privacy Terms Settings</p>
+</footer>
 </html>
 
 <style>
 header{
+    text-align: right;
 }
-div{
+footer{
+    position: absolute;
+    bottom: 0px;
+}
+.align-right-text{
+    text-align: right;
+}
+.center-text{
+    text-align: center;
+}
+div, p{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
 }
-.container{
+.center{
     display: block;
-    margin: 198px auto 10px auto;
-    max-width: 50%;
+    margin: 0 auto 0 auto;
 }
-.btn{
+#container-main{
+    position: relative;
+    top: 154px;
+}
+#input-search{
+    margin-top: 21px;
+}
+#btn-search{
     padding: 7px;
-    width: 150px;
+    width: 135px;
+    margin-right: 5px;
     font-family: arial;
     font-size: 14px;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.041);
 }
-#container-input{
+
+#btn-lucky{
+    padding: 7px;
+    width: 135px;
+    margin-left: 5px;
+    font-family: arial;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.041);
 }
 input{
     width: 450px;
@@ -49,8 +80,10 @@ input{
     border-radius: 50px;
     border-style: solid;
     border-width: 1px;
-    border-color: rgba(0, 0, 0, 0.281)
+    border-color: rgba(0, 0, 0, 0.140)
 }
 #container-btn{
+    margin-top: 20px;
+    width: 280px;
 }
 </style>
