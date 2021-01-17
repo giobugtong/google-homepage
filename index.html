@@ -2,12 +2,23 @@
 <html lang="en">
     <header>
         <p class="align-right-text"><a href="#">Gmail</a> <a href="#">Images</a></p>
+        <div id="apps-container">
+            <div class="apps-blocks"></div>
+            <div class="apps-blocks"></div>
+            <div class="apps-blocks"></div>
+            <div class="apps-blocks"></div>
+            <div class="apps-blocks"></div>
+            <div class="apps-blocks"></div>
+            <div class="apps-blocks"></div>
+            <div class="apps-blocks"></div>
+            <div class="apps-blocks"></div>
+        </div>
     </header>
 <body>
     <div id="container-main">
         <img class="center" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
         <div class="center" class="search-form">
-        <input id="input-search" class="center">
+        <input type="text" id="input-search" class="center">
         <div id="container-btn" class="center">
         <button id="btn-search" class="btn">Google Search
         <button id="btn-lucky" class="btn">I'm Feeling Lucky
@@ -27,6 +38,18 @@
 header{
     text-align: right;
 }
+#apps-container{
+    display: grid;
+    grid-template-columns: 6px 6px 6px;
+    grid-template-rows: 6px 6px 6px;
+    height: 18px;
+    width: 18px;
+}
+.apps-blocks{
+    background-color: rgb(100, 100, 100);
+    height: 4px;
+    width: 4px;
+}
 footer{
     position: absolute;
     bottom: 0px;
@@ -40,6 +63,10 @@ footer{
 div, p{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
+}
+a{
+    color: rgb(45, 0, 206);
+    font-style: initial;
 }
 .search-form{
     position: absolute;
@@ -71,9 +98,8 @@ button:hover{
     border: 1px solid rgba(0, 0, 0, 0.15);
 }
 button:focus{
-    color: blue;
+    height: 200px;
 }
-
 .btn{
     padding: 7px;
     height: 38px;
@@ -85,9 +111,16 @@ button:focus{
     cursor: pointer;
     background-color: rgba(146, 146, 146, 0.051);
 }
-input:hover{
+input[type=text]:hover{
     box-shadow: 0px 1px 3px 2px #8080804f;
     border-color: rgba(0, 0, 0, 0);
+    outline: none;
+}
+input[type=text]:focus{
+    box-shadow: 0px 1px 3px 2px #8080804f;
+    border-color: rgba(0, 0, 0, 0);
+    border-width: 1px;
+    outline: none;
 }
 input{
     width: 463px;
