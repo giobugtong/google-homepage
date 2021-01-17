@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <header>
-        <p class="align-right-text"><a href="#">Gmail</a> <a href="#">Images</a></p>
-        <div id="apps-container">
+        <p id="header-text" class="align-right-text"><a href="#">Gmail</a> <a href="#">Images</a></p>
+        <a href="#"><div id="apps-container">
             <div class="apps-blocks"></div>
             <div class="apps-blocks"></div>
             <div class="apps-blocks"></div>
@@ -12,7 +12,9 @@
             <div class="apps-blocks"></div>
             <div class="apps-blocks"></div>
             <div class="apps-blocks"></div>
-        </div>
+            
+        </div></a>
+        <a href="#"><img class="profile-img" src="https://lh3.googleusercontent.com/ogw/ADGmqu_oOEJwYULx3oXLT_0R5WAA6-P-JYM3DSGIjo4Muw=s32-c-mo"></a>
     </header>
 <body>
     <div id="container-main">
@@ -28,9 +30,9 @@
     </div>
 </body>
 <footer>
-<p>Philippines</p>
-<p class="align-right-text">Advertising Business About How Search Works</p>
-<p class="align-right-text">Privacy Terms Settings</p>
+    <div><p>Philippines</p></div>
+    <div><p class="align-right-text">Advertising Business About How Search Works</p>
+<p class="align-right-text">Privacy Terms Settings</p></div>
 </footer>
 </html>
 
@@ -38,17 +40,41 @@
 header{
     text-align: right;
 }
+#header-text{
+    position: absolute;
+    right: 150px;
+    top: 10px;
+    font-size: 13px;
+    color:rgb(100, 100, 100);
+}
+#apps-container:hover .apps-blocks{
+    background-color: rgb(53, 53, 53);
+}
 #apps-container{
     display: grid;
     grid-template-columns: 6px 6px 6px;
     grid-template-rows: 6px 6px 6px;
-    height: 18px;
-    width: 18px;
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    top: 17px;
+    right: 76px;
+    padding: 6px;
 }
 .apps-blocks{
-    background-color: rgb(100, 100, 100);
+    display: block;
+    background-color: rgb(116, 116, 116);
     height: 4px;
     width: 4px;
+}
+.profile-img:hover{
+    box-shadow: 0px 1px 2px 1px #8080804f;
+}
+.profile-img{
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    right: 29px;
 }
 footer{
     position: absolute;
