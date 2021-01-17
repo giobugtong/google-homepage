@@ -6,12 +6,14 @@
 <body>
     <div id="container-main">
         <img class="center" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
+        <div class="center" class="search-form">
         <input id="input-search" class="center">
         <div id="container-btn" class="center">
-        <button id="btn-search">Google Search
-        <button id="btn-lucky">I'm Feeling Lucky
+        <button id="btn-search" class="btn">Google Search
+        <button id="btn-lucky" class="btn">I'm Feeling Lucky
         </div>
-        <p class="center-text">Google offered in: <a href="#">Filipino</a>  <a href="#">Cebuano</a></p>
+        </div>
+        <p id="offered" class="center-text">Google offered in: <a href="#">Filipino</a> <a href="#">Cebuano</a></p>
     </div>
 </body>
 <footer>
@@ -39,9 +41,16 @@ div, p{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
 }
+.search-form{
+    position: absolute;
+
+}
+#offered{
+    font-size: 13px;
+}
 .center{
     display: block;
-    margin: 0 auto 0 auto;
+    margin: auto;
 }
 #container-main{
     position: relative;
@@ -51,36 +60,43 @@ div, p{
     margin-top: 21px;
 }
 #btn-search{
-    padding: 7px;
-    width: 135px;
     margin-right: 5px;
-    font-family: arial;
-    font-size: 14px;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.041);
 }
 
 #btn-lucky{
-    padding: 7px;
-    width: 135px;
     margin-left: 5px;
+}
+
+button:hover{
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+button:focus{
+    color: blue;
+}
+
+.btn{
+    padding: 7px;
+    height: 38px;
+    width: 135px;
     font-family: arial;
     font-size: 14px;
-    border-radius: 5px;
+    border-style: none;
+    border-radius: 3px;
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.041);
+    background-color: rgba(146, 146, 146, 0.051);
+}
+input:hover{
+    box-shadow: 0px 1px 3px 2px #8080804f;
+    border-color: rgba(0, 0, 0, 0);
 }
 input{
-    width: 450px;
-    height: 20px;
+    width: 463px;
+    height: 25px;
     padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     border-radius: 50px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgba(0, 0, 0, 0.140)
+    border: 1px solid rgba(0, 0, 0, 0.140)
 }
 #container-btn{
     margin-top: 20px;
