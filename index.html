@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
     <header>
-        <p id="header-text" class="align-right-text"><a href="#">Gmail</a> <a href="#">Images</a></p>
-        <a href="#"><div id="apps-container">
+        <p id="text-gmail" class="align-right-text"><a href="#">Gmail</a></p>
+        <p id="text-images" class="align-right-text"><a href="#">Images</a></p>
+        <a href="#">
+            <div id="apps-container">
             <div class="apps-blocks"></div>
             <div class="apps-blocks"></div>
             <div class="apps-blocks"></div>
@@ -12,15 +14,18 @@
             <div class="apps-blocks"></div>
             <div class="apps-blocks"></div>
             <div class="apps-blocks"></div>
-            
-        </div></a>
+            </div>
+        </a>
         <a href="#"><img class="profile-img" src="https://lh3.googleusercontent.com/ogw/ADGmqu_oOEJwYULx3oXLT_0R5WAA6-P-JYM3DSGIjo4Muw=s32-c-mo"></a>
     </header>
 <body>
     <div id="container-main">
         <img class="center" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
         <div class="center" class="search-form">
-        <input type="text" id="input-search" class="center">
+            <div class="magni-icon" id="magni-icon"></div>
+            <div class="magni-icon" id="magni-icon2"></div>
+        <div class="input-border"><input id="input" type="text"></div>
+        
         <div id="container-btn" class="center">
         <button id="btn-search" class="btn">Google Search
         <button id="btn-lucky" class="btn">I'm Feeling Lucky
@@ -29,23 +34,33 @@
         <p id="offered" class="center-text">Google offered in: <a href="#">Filipino</a> <a href="#">Cebuano</a></p>
     </div>
 </body>
-<footer>
-    <div><p>Philippines</p></div>
-    <div><p class="align-right-text">Advertising Business About How Search Works</p>
-<p class="align-right-text">Privacy Terms Settings</p></div>
-</footer>
+    <footer id="footer-container">
+        <div>
+            <div class="footer-content">Philippines</div>
+            <div class="footer-content">Advertising | Business | About | How Search Works</div>
+            <div class="footer-content">Privacy Terms Settings</div>
+        </div>
+    </footer>
 </html>
 
 <style>
 header{
-    text-align: right;
+    height: 40px;
 }
-#header-text{
+#text-gmail, #text-images :hover{
+    
+}
+#text-gmail{
     position: absolute;
-    right: 150px;
+    right: 179px;
     top: 10px;
     font-size: 13px;
-    color:rgb(100, 100, 100);
+}
+#text-images{
+    position: absolute;
+    right: 121px;
+    top: 10px;
+    font-size: 13px;
 }
 #apps-container:hover .apps-blocks{
     background-color: rgb(53, 53, 53);
@@ -76,9 +91,14 @@ header{
     top: 15px;
     right: 29px;
 }
-footer{
+#footer-container{
+    display: flex;
     position: absolute;
     bottom: 0px;
+    background-color: rgb(230, 230, 230);
+}
+.footer-content{
+
 }
 .align-right-text{
     text-align: right;
@@ -90,9 +110,18 @@ div, p{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
 }
-a{
-    color: rgb(45, 0, 206);
-    font-style: initial;
+a:link{
+    text-decoration: none;
+    text-decoration-color:rgb(29, 29, 29)
+}
+a:visited{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+a:active{
+    text-decoration: none;
 }
 .search-form{
     position: absolute;
@@ -137,25 +166,65 @@ button:focus{
     cursor: pointer;
     background-color: rgba(146, 146, 146, 0.051);
 }
-input[type=text]:hover{
+.input-border:hover{
     box-shadow: 0px 1px 3px 2px #8080804f;
     border-color: rgba(0, 0, 0, 0);
     outline: none;
 }
-input[type=text]:focus{
+#input:hover #input-border{
     box-shadow: 0px 1px 3px 2px #8080804f;
     border-color: rgba(0, 0, 0, 0);
-    border-width: 1px;
     outline: none;
 }
-input{
-    width: 463px;
+#input{
+    display: block;
+    margin: -6px auto 0px 45px;
+    width: 410px;
+    height: 31px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+}
+.input-border{
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    width: 465px;
     height: 25px;
     padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     border-radius: 50px;
     border: 1px solid rgba(0, 0, 0, 0.140)
+}
+.magni-icon{
+    
+}
+#magni-icon{
+    display:block;
+    position: absolute;
+    top: 135px;
+    left: 56px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color:rgb(167, 167, 167)
+}
+#magni-icon2{
+    display:block;
+    position: absolute;
+    top: 137px;
+    left: 58px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color:white;
+}
+#magni-handle1{
+
+}
+#magni-handle2{
+
 }
 #container-btn{
     margin-top: 20px;
