@@ -25,20 +25,30 @@
             <div class="magni-icon" id="magni-icon"></div>
             <div class="magni-icon" id="magni-icon2"></div>
         <div class="input-border"><input id="input" type="text"></div>
-        
         <div id="container-btn" class="center">
         <button id="btn-search" class="btn">Google Search
         <button id="btn-lucky" class="btn">I'm Feeling Lucky
         </div>
         </div>
-        <p id="offered" class="center-text">Google offered in: <a href="#">Filipino</a> <a href="#">Cebuano</a></p>
+        <div id="offered" class="center-text">Google offered in: <a href="#" class="blue-text">Filipino</a> <a href="#" class="blue-text">Cebuano</a></div>
     </div>
 </body>
-    <footer id="footer-container">
-        <div>
-            <div class="footer-content">Philippines</div>
-            <div class="footer-content">Advertising | Business | About | How Search Works</div>
-            <div class="footer-content">Privacy Terms Settings</div>
+    <footer>
+        <div id="footer-container">
+            <div id="phl-bar">
+                <div id="phl"><a href="#">Philippines</a></div>
+            </div>
+            <span id="footer-content2">
+                <a href="#">Privacy</a>
+                <a class="pad-left" href="#">Terms</a>
+                <a class="pad-left" href="#">Settings</a>
+            </span>
+            <span id="footer-content1">
+                <a class="pad-left" href="#">Advertising</a>
+                <a class="pad-left" href="#">Business</a>
+                <a class="pad-left" href="#">About</a>
+                <a class="pad-left" href="#">How Search Works</a>
+            </span>
         </div>
     </footer>
 </html>
@@ -47,14 +57,25 @@
 header{
     height: 40px;
 }
-#text-gmail, #text-images :hover{
-    
+body{
+    min-width: 400px;
+}
+#phl-bar{
+    border-top: 1px solid rgba(199, 199, 199, 0.692);
+    border-bottom: 1px solid rgba(199, 199, 199, 0.692);
+}
+#phl{
+    margin-left: 30px;
 }
 #text-gmail{
     position: absolute;
     right: 179px;
     top: 10px;
     font-size: 13px;
+}
+.blue-text{
+    color:rgb(31, 0, 204);
+    padding-left: 8px;
 }
 #text-images{
     position: absolute;
@@ -92,13 +113,21 @@ header{
     right: 29px;
 }
 #footer-container{
-    display: flex;
+    display: block;
     position: absolute;
     bottom: 0px;
-    background-color: rgb(230, 230, 230);
+    left: 0px;
+    right: 0px;
+    line-height: 40px;
+    background-color:#f2f2f2;
 }
-.footer-content{
-
+#footer-content1{
+    float: right;
+    margin-right: 30px
+}
+#footer-content2{
+    float: left;
+    margin-left: 30px;
 }
 .align-right-text{
     text-align: right;
@@ -109,6 +138,9 @@ header{
 div, p{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
+}
+a{
+    color:rgb(39, 39, 39);
 }
 a:link{
     text-decoration: none;
@@ -129,10 +161,14 @@ a:active{
 }
 #offered{
     font-size: 13px;
+    padding: 30px 0 30px 0;
 }
 .center{
     display: block;
     margin: auto;
+}
+.pad-left{
+    padding-left: 27px;
 }
 #container-main{
     position: relative;
@@ -149,11 +185,12 @@ a:active{
     margin-left: 5px;
 }
 
+button{
+color: rgba(49, 49, 49, 1)
+}
+
 button:hover{
     border: 1px solid rgba(0, 0, 0, 0.15);
-}
-button:focus{
-    height: 200px;
 }
 .btn{
     padding: 7px;
@@ -176,6 +213,18 @@ button:focus{
     border-color: rgba(0, 0, 0, 0);
     outline: none;
 }
+@media only screen and (max-width: 800px){
+    #footer-content1, #footer-content2{
+        display: block;
+        margin: 0;
+        float: none;
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 800px){
+    .input-border{
+    }
+}
 #input{
     display: block;
     margin: -6px auto 0px 45px;
@@ -187,15 +236,14 @@ button:focus{
 }
 .input-border{
     display: block;
-    margin: auto;
-    margin-top: 30px;
+    margin: 30px auto 0 auto;
     width: 465px;
     height: 25px;
     padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     border-radius: 50px;
-    border: 1px solid rgba(0, 0, 0, 0.140)
+    border: 1px solid rgba(0, 0, 0, 0.140)    
 }
 .magni-icon{
     
