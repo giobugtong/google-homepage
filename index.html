@@ -16,19 +16,26 @@
             <div class="apps-blocks"></div>
             </div>
         </a>
-        <a href="#"><img class="profile-img" src="https://lh3.googleusercontent.com/ogw/ADGmqu_oOEJwYULx3oXLT_0R5WAA6-P-JYM3DSGIjo4Muw=s32-c-mo"></a>
+        <a href="https://github.com/giodude23" target="_blank"><img class="profile-img" src="https://lh3.googleusercontent.com/ogw/ADGmqu_oOEJwYULx3oXLT_0R5WAA6-P-JYM3DSGIjo4Muw=s32-c-mo"></a>
     </header>
 <body>
     <div id="container-main">
         <img class="center" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
         <div class="center" class="search-form">
-            
         <div class="input-border">
             <div id="magni-container">
                 <div class="magni-icon" id="magni-icon">
                     <div class="magni-icon" id="magni-icon2"></div>
                 </div>
                 <div id="magni-handle1"></div>
+            </div>
+            <div id="mic-icon-container">
+                <div id="mic-fig1"></div>
+                <div id="mic-fig2">
+                    <div id="mic-fig2-1"></div>
+                    <div id="mic-fig2-2"></div>
+                </div>
+                <div id="mic-fig3"></div>
             </div>
             <input id="input" type="text"></div>
         <div id="container-btn" class="center">
@@ -65,6 +72,7 @@ header{
 }
 body{
     min-width: 400px;
+    min-height: 400px;
 }
 #phl-bar{
     border-top: 1px solid rgba(199, 199, 199, 0.692);
@@ -111,6 +119,7 @@ body{
 }
 .profile-img:hover{
     box-shadow: 0px 1px 2px 1px #8080804f;
+
 }
 .profile-img{
     border-radius: 50%;
@@ -227,10 +236,12 @@ button:hover{
         text-align: center;
     }
 }
+@media only screen and (max-width: 500px){
+}
 #input{
     display: block;
     margin: -6px auto 0px 45px;
-    width: 410px;
+    width: 360px;
     height: 31px;
     outline: none;
     border: none;
@@ -280,7 +291,66 @@ button:hover{
     transform:rotate(-45deg);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    border
+}
+#mic-icon-container{
+    background-color: none;
+    height: 50px;
+    width: 55px;
+    padding: 6px;
+    float: right;
+    transform: scale(.45);
+    position: relative;
+    top: -17px;
+    right: -15px;
+}
+#mic-fig1{
+    background-color: rgb(66, 133, 244);
+    height: 34px;
+    width: 16px;
+    border-radius: 40px;
+    position: relative;
+    margin: auto;
+    z-index: 0;
+}
+#mic-fig2{
+    background-color: rgb(244, 66, 66);
+    height: 32px;
+    width: 32px;
+    position: relative;
+    margin: auto;
+    top: -24px;
+    border-radius: 50%;
+    z-index: -1;
+}
+#mic-fig2-1{
+    background-color: rgb(255, 255, 255);
+    height: 24px;
+    width: 24px;
+    position: relative;
+    top: 4px;
+    left: 4px;
+    border-radius: 50%;
+    z-index: 0;
+}
+#mic-fig2-2{
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    height: 16px;
+    width: 36px;
+    position: relative;
+    top: -23px;
+    left: -2px;
+    z-index: 0;
+}
+#mic-fig3{
+    background-color: rgb(52, 168, 83);
+    width: 5px;
+    height: 8px;
+    display: block;
+    margin: auto;
+    position: relative;
+    top: -25px;
+    z-index: -2;
 }
 #container-btn{
     margin-top: 20px;
