@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="HandheldFriendly" content="true">
+    </head>
     <header>
         <p id="text-gmail" class="align-right-text"><a href="#">Gmail</a></p>
         <p id="text-images" class="align-right-text"><a href="#">Images</a></p>
@@ -239,8 +244,21 @@ button:active{
         text-align: center;
     }
 }
-@media only screen and (max-width: 500px){
-}
+@media only screen and (max-width: 400px){
+    button{
+        display: none;
+    }
+    header{
+        display: flex;
+        height: 48px;
+        width: 100%;
+    }
+    #container-main{
+        display:flex;
+        -webkit-box-orient:vertical;
+        flex-direction:column;
+        min-height:100%}
+    }
 #input{
     display: block;
     margin: -6px auto 0px 45px;
