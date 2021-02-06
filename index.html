@@ -26,7 +26,7 @@
 <body>
     <div id="container-main">
         <img class="center" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
-        <div class="center" class="search-form">
+        <div id="container-search" class="center" class="search-form">
         <div class="input-border">
             <div id="magni-container">
                 <div class="magni-icon" id="magni-icon">
@@ -42,7 +42,8 @@
                 </div>
                 <div id="mic-fig3"></div>
             </div>
-            <input id="input" type="text"></div>
+            <input id="input" type="text">
+        </div>
         <div id="container-btn" class="center">
         <button id="btn-search" class="btn">Google Search
         <button id="btn-lucky" class="btn">I'm Feeling Lucky
@@ -243,7 +244,42 @@ button:active{
         float: none;
         text-align: center;
         padding: 3px;
-      
+    }
+    #container-main{
+        display:flex;
+        -webkit-box-orient:vertical;
+        flex-direction:column;
+        min-height:100%;
+        }
+    button{
+        display: none;
+    }
+    #how-search-works{
+        display: none;
+    }
+    #mic-icon-container{
+        display: none;
+    }
+    body{
+        min-width: auto;
+        min-height: auto;
+    }
+    #input{
+        margin: none;
+        width: auto !important;
+        min-width: 80% !important;
+    }
+    .input-border{
+        width: auto;
+        margin: auto;
+    }
+    #container-search{
+        display: block;
+        width: 100%;
+    }
+    .input-border{
+        display: block;
+        width: auto;
     }
     }
 @media only screen and (max-width: 400px){
@@ -259,17 +295,40 @@ button:active{
         display:flex;
         -webkit-box-orient:vertical;
         flex-direction:column;
-        min-height:100%
+        min-height:100%;
         }
     
     #how-search-works{
         display: none;
     }
-    
+    #mic-icon-container{
+        display: none;
+    }
+    body{
+        min-width: auto;
+        min-height: auto;
+    }
+    #input{
+        margin: none;
+        width: auto !important;
+        min-width: 80% !important;
+    }
+    .input-border{
+        width: auto;
+        margin: auto;
+    }
+    #container-search{
+        display: block;
+        width: 100%;
+    }
+    .input-border{
+        display: block;
+        width: auto;
+    }
     }
 #input{
     display: block;
-    margin: -6px auto 0px 45px;
+    margin: -5px auto 0px 45px;
     width: 360px;
     height: 31px;
     outline: none;
@@ -279,7 +338,8 @@ button:active{
 .input-border{
     display: block;
     margin: 30px auto 0 auto;
-    width: 465px;
+    width: auto;
+    max-width: 465px;
     height: 25px;
     padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
