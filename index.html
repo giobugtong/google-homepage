@@ -65,7 +65,7 @@
                 <a href="#">Advertising</a>
                 <a class="pad-left" href="#">Business</a>
                 <a class="pad-left" href="#">About</a>
-                <a class="pad-left" href="#">How Search Works</a>
+                <a class="pad-left" id="how-search-works" href="#">How Search Works</a>
             </span>
         </div>
     </footer>
@@ -242,8 +242,10 @@ button:active{
         margin: 0;
         float: none;
         text-align: center;
+        padding: 3px;
+      
     }
-}
+    }
 @media only screen and (max-width: 400px){
     button{
         display: none;
@@ -257,7 +259,13 @@ button:active{
         display:flex;
         -webkit-box-orient:vertical;
         flex-direction:column;
-        min-height:100%}
+        min-height:100%
+        }
+    
+    #how-search-works{
+        display: none;
+    }
+    
     }
 #input{
     display: block;
